@@ -1,0 +1,5 @@
+inherit_gem:
+  optimum-energy-rubocop: optimum_energy_rubocop.yml
+
+AllCops:
+  SuggestExtensions: false
