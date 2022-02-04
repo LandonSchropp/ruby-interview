@@ -34,6 +34,7 @@ RSpec.configure do |config|
   # Many RSpec users commonly either run the entire suite or an individual file, and it's useful to
   # allow more verbose output when running an individual spec file.
   if config.files_to_run.one?
+
     # Use the documentation formatter for detailed output, unless a formatter has already been
     # configured.
     config.default_formatter = "doc"
@@ -44,4 +45,7 @@ RSpec.configure do |config|
 
   # Seed global randomization in this process using the `--seed` CLI option.
   Kernel.srand config.seed
+
+  # Ensure the Rspec methods is available without needing to prepend them with `Rspec`.
+  config.expose_dsl_globally = true
 end
