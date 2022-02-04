@@ -4,6 +4,7 @@ ruby IO.read(".ruby-version")
 
 group :development, :test do
   gem "guard-rspec", require: false
+  gem "pry-byebug"
   gem "rspec"
 end
 
