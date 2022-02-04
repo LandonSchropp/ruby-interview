@@ -97,6 +97,7 @@ PLATFORMS
   x86_64-darwin-20
 
 DEPENDENCIES
+  activesupport
   guard-rspec
   optimum-energy-rubocop
   pry-byebug

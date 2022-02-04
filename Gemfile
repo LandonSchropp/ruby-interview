@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby IO.read(".ruby-version")
 
+gem "activesupport"
+
 group :development, :test do
   gem "guard-rspec", require: false
   gem "pry-byebug"
