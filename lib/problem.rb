@@ -1,9 +1,7 @@
 module Problem
-
-  # TODO: Replace this with the implementation from the interview problem.
-  def problem(value)
-    value
+  def flatten(array)
+    array.reduce([]) { _2.is_a?(Array) ? _1.concat(flatten(_2)) : _1 << _2 }
   end
 
-  module_function :problem
+  module_function :flatten
 end
