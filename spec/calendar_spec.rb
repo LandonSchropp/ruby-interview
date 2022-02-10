@@ -104,4 +104,21 @@ describe Calendar do
       expect(Calendar.title(Date.parse("2022-02-01"))).to eq("   February 2022")
     end
   end
+
+  describe ".calendar" do
+
+    it "prints the calendar, including a title and week header" do
+      expected = <<~CALENDAR.rstrip
+           December 2021
+        Su Mo Tu We Th Fr Sa
+                  1  2  3  4
+         5  6  7  8  9 10 11
+        12 13 14 15 16 17 18
+        19 20 21 22 23 24 25
+        26 27 28 29 30 31
+      CALENDAR
+
+      expect(Calendar.calendar(Date.parse("2021-12-01"))).to eq(expected)
+    end
+  end
 end

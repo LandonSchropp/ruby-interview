@@ -18,7 +18,7 @@ module Calendar
   end
 
   # Returns the days in the month. This does not include the name of the month or the week header.
-  # @param date The date object represets the month.
+  # @param date The date object representing the month.
   def days(date)
 
     # Use the start of the month.
@@ -41,8 +41,15 @@ module Calendar
     "#{ padding }#{ title }"
   end
 
+  # Returns a string representing the month for the provided date.
+  # @param date The date object representing the month.
+  def calendar(date)
+    "#{ title(date) }\n#{ WEEK_HEADER }\n#{ days(date) }"
+  end
+
   module_function :day
   module_function :week
   module_function :days
   module_function :title
+  module_function :calendar
 end
