@@ -1,7 +1,7 @@
 require "date"
 
 module Calendar
-  WEEK_HEADER = "Su Mo Tu We Th Fr Sa"
+  WEEK_HEADER = "Su Mo Tu We Th Fr Sa".freeze
   NUMBER_OF_CHARACTERS_IN_WEEK = 2 * 7 + 6
 
   # Returns a string representing the day.
