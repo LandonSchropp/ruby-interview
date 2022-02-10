@@ -1,5 +1,4 @@
 require "date"
-require "pry-byebug"
 
 module Calendar
   WEEK_HEADER = "Su Mo Tu We Th Fr Sa"
