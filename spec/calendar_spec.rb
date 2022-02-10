@@ -97,4 +97,11 @@ describe Calendar do
       end
     end
   end
+
+  describe ".title" do
+
+    it "returns the padded title" do
+      expect(Calendar.title(Date.parse("2022-02-01"))).to eq("   February 2022")
+    end
+  end
 end

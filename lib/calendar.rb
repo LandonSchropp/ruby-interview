@@ -2,6 +2,8 @@ require "date"
 require "pry-byebug"
 
 module Calendar
+  WEEK_HEADER = "Su Mo Tu We Th Fr Sa"
+  NUMBER_OF_CHARACTERS_IN_WEEK = 2 * 7 + 6
 
   # Returns a string representing the day.
   # @param day The day to convert to a string.
@@ -32,7 +34,15 @@ module Calendar
       .join("\n")
   end
 
+  # Prints the title of the calendar properly spaced.
+  def title(date)
+    title = date.strftime("%B %Y")
+    padding = " " * ((NUMBER_OF_CHARACTERS_IN_WEEK - title.length) / 2)
+    "#{ padding }#{ title }"
+  end
+
   module_function :day
   module_function :week
   module_function :days
+  module_function :title
 end
