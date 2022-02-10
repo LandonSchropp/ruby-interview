@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require "date"
+require_relative "../lib/calendar"
+
+puts Calendar.calendar(Time.now.to_date)
